@@ -4,7 +4,6 @@ export const ContactsGroup = styled.div`
   margin: 0;
   padding: 16px 40px;
   text-align: center;
-  background: lavender;
 `;
 
 export const AppTitle = styled.h1`

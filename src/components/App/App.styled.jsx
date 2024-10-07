@@ -4,7 +4,7 @@ export const Application = styled.div`
   margin: 0;
   padding: 16px 40px;
   text-align: center;
-  background: lavender;
+
   color: chocolate;
 `;
 

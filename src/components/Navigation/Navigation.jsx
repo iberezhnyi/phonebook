@@ -4,7 +4,12 @@ import { selectAuthToken } from '../../redux/auth/auth.selector';
 import { selectProfileToken } from '../../redux/profile/profile.selector';
 import { getProfileThunk } from '../../redux/profile/profile.thunk';
 import UserMenu from '../UserMenu/UserMenu';
-import { HeaderNav, NavItem } from './Navigation.styled';
+import {
+  HeaderNav,
+  NavItem,
+  NavList,
+  NavLinkStyled,
+} from './Navigation.styled';
 
 export const Navigation = () => {
   const dispatch = useDispatch();
@@ -26,11 +31,17 @@ export const Navigation = () => {
           <UserMenu mail={profile.email} />
         </>
       ) : (
-        <>
-          <NavItem to="/">Home</NavItem>
-          <NavItem to="/register">Register</NavItem>
-          <NavItem to="/login">Log In</NavItem>
-        </>
+        <NavList>
+          <NavItem>
+            <NavLinkStyled to="/">Home</NavLinkStyled>
+          </NavItem>
+          <NavItem>
+            <NavLinkStyled to="/register">Register</NavLinkStyled>
+          </NavItem>
+          <NavItem>
+            <NavLinkStyled to="/login">Log In</NavLinkStyled>
+          </NavItem>
+        </NavList>
       )}
     </HeaderNav>
   );

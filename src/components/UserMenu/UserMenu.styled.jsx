@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const ProfileMenu = styled.div`
   display: flex;
-  margin-left: auto;
+  /* margin-left: auto; */
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const ProfileEmail = styled.p`
-  margin: 0 36px 0 0;
+  /* margin: 0 36px 0 0; */
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;

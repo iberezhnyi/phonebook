@@ -11,6 +11,7 @@ import {
   LabelField,
   InputField,
   ButtonAdding,
+  LabelName,
 } from './Register.styled';
 
 const initialState = {
@@ -41,25 +42,32 @@ const RegisterPage = () => {
       await dispatch(
         authLoginThunk({ email: values.email, password: values.password })
       ).unwrap();
+
       setIsLoading(false);
+
       toast.success('Welcome to Your Phonebook!');
+
+      setValues(initialState);
     } catch (error) {
       console.log(error);
-      toast.error('Something went wrong!');
+      toast.error(
+        `Something went wrong! ${
+          error?.response?.data?.message || error?.message
+        }`
+      );
+      setIsLoading(false);
     }
-
-    setValues(initialState);
   };
 
   return (
     <RegisterGroup>
       {isLoading && <Loader />}
 
-      <RegisterTitle>Please Sign up Your Phonebook</RegisterTitle>
+      <RegisterTitle>Please Sign up</RegisterTitle>
 
       <Form onSubmit={handleSubmit}>
         <LabelField>
-          Name
+          <LabelName>Name</LabelName>
           <InputField
             type="text"
             name="name"
@@ -74,7 +82,7 @@ const RegisterPage = () => {
         </LabelField>
 
         <LabelField>
-          Email
+          <LabelName>Email</LabelName>
           <InputField
             type="email"
             name="email"
@@ -87,7 +95,7 @@ const RegisterPage = () => {
         </LabelField>
 
         <LabelField>
-          Password
+          <LabelName>Password</LabelName>
           <InputField
             // type={isPassword ? "password" : "text"}
             type="password"

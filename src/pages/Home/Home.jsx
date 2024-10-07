@@ -1,12 +1,12 @@
 import image from '../../images/phonebook-logo.png';
-import { StyledImage, StyledText, StyledWrapper } from './Home.styled';
+import { StyledImage, StyledText, HomeGroup } from './Home.styled';
 
 const HomePage = () => {
   return (
-    <StyledWrapper>
+    <HomeGroup>
       <StyledText>Welcome to your Phonebook!</StyledText>
       <StyledImage src={image} alt="Your Phonebook logo" width={500} />
-    </StyledWrapper>
+    </HomeGroup>
   );
 };
 

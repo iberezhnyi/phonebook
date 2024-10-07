@@ -11,6 +11,7 @@ import {
   LabelField,
   InputField,
   ButtonAdding,
+  LabelName,
 } from './Login.styled';
 
 const initialState = {
@@ -40,6 +41,7 @@ const LoginPage = () => {
 
     try {
       await dispatch(authLoginThunk(values)).unwrap();
+      toast.success('Welcome to Your Phonebook!');
     } catch (error) {
       console.log(error);
       toast.error('Something is wrong with your email or password.');
@@ -52,11 +54,11 @@ const LoginPage = () => {
     <RegisterGroup>
       {status === 'loading' && <Loader />}
 
-      <RegisterTitle>Please Log in Your Phonebook</RegisterTitle>
+      <RegisterTitle>Please Log in</RegisterTitle>
 
       <Form onSubmit={handleSubmit}>
         <LabelField>
-          Email
+          <LabelName>Name</LabelName>
           <InputField
             type="email"
             name="email"
@@ -69,7 +71,7 @@ const LoginPage = () => {
         </LabelField>
 
         <LabelField>
-          Password
+          <LabelName>Password</LabelName>
           <InputField
             // type={isPassword ? "password" : "text"}
             type="password"

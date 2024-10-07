@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledWrapper = styled.div`
+export const HomeGroup = styled.div`
   text-align: center;
 `;
 
@@ -15,6 +15,6 @@ export const StyledImage = styled.img`
   height: 100%;
 
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width: 448px;
   }
 `;

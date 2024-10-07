@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { PublicRoute } from '../AuthRoutes/PublicRoute';
 import { PrivateRoute } from '../AuthRoutes/PrivateRoute';
-import { Layout } from '../Layout/Layout';
+import { Layout } from '../../Layout/Layout';
 import NotFoundPage from 'pages/NotFound/NotFound';
 
 const HomePage = lazy(() => import('pages/Home/Home'));
