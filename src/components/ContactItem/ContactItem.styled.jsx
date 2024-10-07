@@ -6,7 +6,7 @@ export const ContactsItem = styled.li`
   align-items: center;
 
   &:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 `;
 

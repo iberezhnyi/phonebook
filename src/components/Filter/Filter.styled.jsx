@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 
 export const FilterLabel = styled.label`
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
+  width: 400px; */
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 8px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
+`;
+
+export const LabelName = styled.p`
+  margin-bottom: 10px;
 `;
 
 export const FilterInput = styled.input`

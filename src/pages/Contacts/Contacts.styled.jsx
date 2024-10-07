@@ -3,7 +3,11 @@ import styled from 'styled-components';
 export const ContactsGroup = styled.div`
   margin: 0;
   padding: 16px 40px;
-  text-align: center;
+  /* text-align: center; */
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const AppTitle = styled.h1`

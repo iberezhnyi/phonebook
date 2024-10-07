@@ -9,15 +9,19 @@ export const ProfileMenu = styled.div`
 
 export const ProfileEmail = styled.p`
   /* margin: 0 36px 0 0; */
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
   color: honeydew;
+
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 export const LogOutButton = styled.button`
   padding: 4px 24px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
   border: 1px solid #35363a;

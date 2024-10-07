@@ -8,6 +8,7 @@ import {
   LabelField,
   InputField,
   ButtonAdding,
+  LabelName,
 } from './ContactForm.styled';
 
 const ContactForm = () => {
@@ -59,7 +60,7 @@ const ContactForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <LabelField>
-        Name
+        <LabelName>Name</LabelName>
         <InputField
           type="text"
           name="name"
@@ -73,7 +74,7 @@ const ContactForm = () => {
       </LabelField>
 
       <LabelField>
-        Number
+        <LabelName>Number</LabelName>
         <InputField
           type="tel"
           name="number"
