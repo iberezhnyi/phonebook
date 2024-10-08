@@ -1,7 +1,6 @@
 {
-  "name": "react-homework-template",
+  "name": "phonebook",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://iberezhnyi.github.io/phonebook/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",

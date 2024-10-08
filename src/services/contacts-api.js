@@ -1,7 +1,8 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { privateApi } from '../api/api';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 export async function fetchContacts() {
   const response = await privateApi.get(`/contacts`);

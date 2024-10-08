@@ -8,7 +8,6 @@ import ContactItem from '../ContactItem/ContactItem';
 export default function ContactList() {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,8 +26,8 @@ export default function ContactList() {
 
   return (
     <ContactsList>
-      {filteredContacts.map(({ id, name, number }) => (
-        <ContactItem key={id} id={id} name={name} number={number} />
+      {filteredContacts.map(({ id, name, phone }) => (
+        <ContactItem key={id} id={id} name={name} phone={phone} />
       ))}
     </ContactsList>
   );

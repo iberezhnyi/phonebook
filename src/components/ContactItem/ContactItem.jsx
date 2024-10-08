@@ -7,13 +7,13 @@ import {
   ButtonDeleting,
 } from './ContactItem.styled';
 
-export default function ContactItem({ id, name, number }) {
+export default function ContactItem({ id, name, phone }) {
   const dispatch = useDispatch();
 
   return (
     <ContactsItem>
       <ContactName>
-        {name}: {number}
+        {name}: {phone}
       </ContactName>
       <ButtonDeleting
         type="button"
@@ -28,5 +28,5 @@ export default function ContactItem({ id, name, number }) {
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
 };

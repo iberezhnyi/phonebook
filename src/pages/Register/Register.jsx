@@ -38,7 +38,7 @@ const RegisterPage = () => {
 
     try {
       setIsLoading(true);
-      await publicApi.post('/users/signup', values);
+      await publicApi.post('users/register', values);
       await dispatch(
         authLoginThunk({ email: values.email, password: values.password })
       ).unwrap();

@@ -4,7 +4,7 @@ export const Form = styled.form`
   /* width: 400px; */
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
   /* padding: 8px; */
 
   @media screen and (min-width: 768px) {

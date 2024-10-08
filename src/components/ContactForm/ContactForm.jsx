@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import { selectContacts } from '../../redux/selectors';
 import * as contactsOperations from '../../redux/contacts/contactsOperations';
 import {
@@ -13,7 +13,7 @@ import {
 
 const ContactForm = () => {
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setPhone] = useState('');
 
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
@@ -25,8 +25,8 @@ const ContactForm = () => {
       case 'name':
         setName(value);
         break;
-      case 'number':
-        setNumber(value);
+      case 'phone':
+        setPhone(value);
         break;
       default:
         return;
@@ -37,9 +37,9 @@ const ContactForm = () => {
     event.preventDefault();
 
     const newContact = {
-      id: nanoid(),
+      // id: nanoid(),
       name,
-      number,
+      phone,
     };
 
     const isContactNameInList = contactName => {
@@ -54,7 +54,7 @@ const ContactForm = () => {
     dispatch(contactsOperations.addContact(newContact));
 
     setName('');
-    setNumber('');
+    setPhone('');
   };
 
   return (
@@ -74,15 +74,15 @@ const ContactForm = () => {
       </LabelField>
 
       <LabelField>
-        <LabelName>Number</LabelName>
+        <LabelName>Phone</LabelName>
         <InputField
           type="tel"
-          name="number"
+          name="phone"
           // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           autoComplete="off"
-          value={number}
+          value={phone}
           onChange={handleInputChange}
         />
       </LabelField>
