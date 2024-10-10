@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 
 export const ContactsItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &:not(:last-child) {
     margin-bottom: 12px;
   }
-`;
-
-export const ContactName = styled.p`
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
 `;
 
 export const ButtonDeleting = styled.button`
